@@ -25,11 +25,7 @@ namespace Employees.Controllers
 
         public ActionResult Index()
         {
-            using (EmployeesLogic logic  = new EmployeesLogic())
-            {
-                List<Dal.GETEmployeeList_Result> AllEmployees = logic.GetAllEmployees();
-                return  Json(AllEmployees, JsonRequestBehavior.AllowGet);
-            }
+           return View();
         }
      // GET: EmployeeRoles
        public ActionResult EmployeeRoles(int EmployeeId)
